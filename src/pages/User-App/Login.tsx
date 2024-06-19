@@ -65,14 +65,19 @@ export const Login: React.FC = () => {
 		}
 	};
 	return (
-		<div className="flex items-center justify-center min-h-screen bg-gray-100">
-			<div className="w-full max-w-md p-8 space-y-6 bg-white rounded shadow-md">
-				<h1 className="text-2xl font-bold text-center">Login</h1>
-				<form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+		<div className="flex flex-col justify-center items-center h-screen gap-x-4 bg-black">
+			<div className="text-white font-medium text-3xl my-5">
+				PLAYER LOGIN
+			</div>
+			<div className="">
+				<form
+					onSubmit={handleSubmit(onSubmit)}
+					className="bg-neutral-900 shadow-md rounded px-8 pt-6 pb-8 mb-4 grid gap-y-4"
+				>
 					<div>
 						<label
 							htmlFor="playerName"
-							className="block text-sm font-medium text-gray-700"
+							className="block text-white text-sm font-medium mb-2"
 						>
 							Player Name
 						</label>
@@ -80,7 +85,7 @@ export const Login: React.FC = () => {
 							id="playerName"
 							type="text"
 							{...register("playerName")}
-							className="w-full px-3 py-2 mt-1 border rounded shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+							className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-none"
 						/>
 						{errors.playerName && (
 							<span className="text-sm text-red-600">
@@ -92,7 +97,7 @@ export const Login: React.FC = () => {
 					<div>
 						<label
 							htmlFor="username"
-							className="block text-sm font-medium text-gray-700"
+							className="block text-white text-sm font-medium mb-2"
 						>
 							Username
 						</label>
@@ -100,7 +105,7 @@ export const Login: React.FC = () => {
 							id="username"
 							type="text"
 							{...register("username")}
-							className="w-full px-3 py-2 mt-1 border rounded shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+							className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-none"
 						/>
 						{errors.username && (
 							<span className="text-sm text-red-600">
@@ -112,7 +117,7 @@ export const Login: React.FC = () => {
 					<div>
 						<label
 							htmlFor="phoneNumber"
-							className="block text-sm font-medium text-gray-700"
+							className="block text-white text-sm font-medium mb-2"
 						>
 							Phone Number
 						</label>
@@ -121,7 +126,7 @@ export const Login: React.FC = () => {
 							type="text"
 							{...register("phoneNumber")}
 							onChange={handlePhoneNumberChange}
-							className="w-full px-3 py-2 mt-1 border rounded shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+							className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-none"
 						/>
 						{errors.phoneNumber && (
 							<span className="text-sm text-red-600">
@@ -133,7 +138,7 @@ export const Login: React.FC = () => {
 					<div>
 						<label
 							htmlFor="distributorId"
-							className="block text-sm font-medium text-gray-700"
+							className="block text-white text-sm font-medium mb-2"
 						>
 							Distributor ID
 						</label>
@@ -141,7 +146,7 @@ export const Login: React.FC = () => {
 							id="distributorId"
 							type="text"
 							{...register("distributorId")}
-							className="w-full px-3 py-2 mt-1 border rounded shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+							className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-none"
 						/>
 						{errors.distributorId && (
 							<span className="text-sm text-red-600">
@@ -153,7 +158,7 @@ export const Login: React.FC = () => {
 					<div>
 						<label
 							htmlFor="distributorKey"
-							className="block text-sm font-medium text-gray-700"
+							className="block text-white text-sm font-medium mb-2"
 						>
 							Distributor Key
 						</label>
@@ -161,7 +166,7 @@ export const Login: React.FC = () => {
 							id="distributorKey"
 							type="text"
 							{...register("distributorKey")}
-							className="w-full px-3 py-2 mt-1 border rounded shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+							className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-none"
 						/>
 						{errors.distributorKey && (
 							<span className="text-sm text-red-600">
@@ -173,14 +178,14 @@ export const Login: React.FC = () => {
 					<div>
 						<label
 							htmlFor="game"
-							className="block text-sm font-medium text-gray-700"
+							className="block text-white text-sm font-medium mb-2"
 						>
 							Select Game
 						</label>
 						<select
 							id="game"
 							{...register("game")}
-							className="w-full px-3 py-2 mt-1 border rounded shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+							className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-none"
 						>
 							<option value="All">All</option>
 							<option value="Andar Bahar">Andar Bahar</option>
@@ -197,7 +202,7 @@ export const Login: React.FC = () => {
 
 					<button
 						type="submit"
-						className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+						className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
 					>
 						Login
 					</button>
