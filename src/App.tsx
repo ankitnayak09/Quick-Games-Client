@@ -1,11 +1,11 @@
 import "./App.css";
 import { Navigate, Route, Routes } from "react-router-dom";
-import { Login } from "./pages/Login";
-import AndarBahar from "./pages/AndarBahar";
-import Lottery from "./pages/Lottery";
-import Roulette from "./pages/Roulette";
-import Raashi from "./pages/Raashi";
-import Games from "./pages/Games";
+import { Login } from "./pages/User-App/Login";
+import AndarBahar from "./pages/User-App/AndarBahar";
+import Lottery from "./pages/User-App/Lottery";
+import Roulette from "./pages/User-App/Roulette";
+import Raashi from "./pages/User-App/Raashi";
+import Games from "./pages/User-App/Games";
 
 function App() {
 	return (
